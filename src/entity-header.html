@@ -1,0 +1,40 @@
+<template>
+  <div class="row">
+    <div class="col m8 no-padding">
+      <h3 class="left">${title}</h3>
+    </div>
+    <div class="col m4">
+      <button type="button" class="right waves-effect waves-light btn header-button"
+              click.delegate="revert()" show.bind="isChangeable">
+        Cancelar
+      </button>
+      <button type="submit" class="right waves-effect waves-light btn header-button"
+              show.bind="isChangeable">
+        Salvar
+      </button>
+      <button type="button" class="right waves-effect waves-light btn header-button"
+          click.delegate="back()">
+        Voltar
+      </button>
+      <button type="button" class="right waves-effect waves-light btn header-button"
+          click.delegate="disable()" show.bind="isChangeable">
+        Desativar
+      </button>
+      <button type="button" class="right waves-effect waves-light btn header-button"
+          click.delegate="setChangeable()" show.bind="!isChangeable">
+        Alterar
+      </button>
+    </div>
+  </div>
+  <!-- Modal Structure -->
+<!-- Modal Structure -->
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+  </div>
+</template>
