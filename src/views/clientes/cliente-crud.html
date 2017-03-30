@@ -1,0 +1,25 @@
+<template>
+  <div class="container">
+    <form submit.delegate="baseEntity.salvar()" novalidate>
+
+      <!-- header -->
+      <compose view="../../resources/crud/crud-header.html"></compose>
+
+      <div class="row">
+        <h4>Shipping</h4>
+        <div class="input-field col s12 m5">
+          <input id="Id" type="text" value.bind="entidade.Id" disabled.bind="estado_crud.campo.desabilitado">
+          <label for="Id" materialize>Id</label>
+        </div>
+        <div class="input-field col s12 m5">
+          <input id="Nome" type="text" value.bind="entidade.Nome" disabled.bind="estado_crud.campo.desabilitado">
+          <label for="Nome" materialize>Nome</label>
+        </div>
+        <div class="input-field col s12 m2">
+          <input id="Sobrenome" type="text" value.bind="entidade.Sobrenome" disabled.bind="estado_crud.campo.desabilitado">
+          <label for="Sobrenome" materialize>Sobrenome</label>
+        </div>
+      </div>
+    </form>
+  </div>
+</template>

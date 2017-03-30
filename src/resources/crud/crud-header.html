@@ -5,36 +5,25 @@
     </div>
     <div class="col m4">
       <button type="button" class="right waves-effect waves-light btn header-button"
-              click.delegate="revert()" show.bind="isChangeable">
-        Cancelar
+              disabled.bind="estado_crud.cancelar.desabilitado" click.delegate="baseEntity.reverter()" show.bind="estado_crud.cancelar.visivel">
+        Cancelar 
       </button>
       <button type="submit" class="right waves-effect waves-light btn header-button"
-              show.bind="isChangeable">
+             disabled.bind="estado_crud.salvar.desabilitado" show.bind="estado_crud.salvar.visivel">
         Salvar
       </button>
       <button type="button" class="right waves-effect waves-light btn header-button"
-          click.delegate="back()">
+          disabled.bind="estado_crud.voltar.desabilitado" click.delegate="baseEntity.voltar()" show.bind="estado_crud.voltar.visivel">
         Voltar
       </button>
       <button type="button" class="right waves-effect waves-light btn header-button"
-          click.delegate="disable()" show.bind="isChangeable">
+          disabled.bind="estado_crud.desativar.desabilitado" click.delegate="baseEntity.desativar()" show.bind="estado_crud.desativar.visivel">
         Desativar
       </button>
       <button type="button" class="right waves-effect waves-light btn header-button"
-          click.delegate="setChangeable()" show.bind="!isChangeable">
+          disabled.bind="estado_crud.alterar.desabilitado" click.delegate="baseEntity.marcarAlteravel()" show.bind="estado_crud.alterar.visivel">
         Alterar
       </button>
-    </div>
-  </div>
-  <!-- Modal Structure -->
-<!-- Modal Structure -->
-  <div id="modal1" class="modal modal-fixed-footer">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
     </div>
   </div>
 </template>

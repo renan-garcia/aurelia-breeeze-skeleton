@@ -1,5 +1,5 @@
 import {inject} from 'aurelia-dependency-injection';
-import {Lookups} from './lookups';
+import {Lookups} from './resources/data/lookups';
 import {EventAggregator} from 'aurelia-event-aggregator';
 
 @inject(Lookups, EventAggregator)
@@ -15,7 +15,7 @@ export class App {
     config.title = 'Northwind';
     config.map([
       { route: '', redirect: 'clientes' },
-      { route: 'clientes',    moduleId: './clientes/clientes-section',       nav: true, title: 'Clientes' },
+      { route: 'clientes',    moduleId: './views/clientes/clientes-section',       nav: true, title: 'Clientes' },
     ]);
     this.router = router;
   }

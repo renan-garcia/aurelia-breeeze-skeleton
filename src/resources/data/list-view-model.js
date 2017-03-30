@@ -3,17 +3,17 @@ import settings from './settings';
 export class ListViewModel {
   router;
   route;
-  service;
+  repositorio;
   entities = [];
   pageSize = settings.pageSize;
   pageCount = 0;
   pageIndex = 0;
   isLoading = false;
 
-  constructor(route, router, service) {
+  constructor(route, router, repositorio) {
     this.route = route;
     this.router = router;
-    this.service = service;
+    this.repositorio = repositorio;
   }
 
   activate() {
@@ -22,7 +22,7 @@ export class ListViewModel {
 
   load() {
     this.isLoading = true;
-    this.service.getPage(this.pageIndex)
+    this.repositorio.getPage(this.pageIndex)
       .then(result => {
         this.entities = result.entities;
         this.pageCount = result.pageCount;

@@ -6,7 +6,7 @@ export class ClientesSection {
   configureRouter(config, router) {
     config.map([
       { route: '',    moduleId: './cliente-list', nav: false, title: '' },
-      { route: ':id', moduleId: './cliente',      nav: false, title: '' },
+      { route: ':id', moduleId: './cliente-crud',      nav: false, title: '' },
     ]);
   }
 }

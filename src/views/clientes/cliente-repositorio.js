@@ -1,8 +1,8 @@
 import breeze from 'breeze';
-import settings from '../settings';
-import {createEntityManager} from '../entity-manager-factory';
+import settings from '../../resources/data/settings';
+import { createEntityManager } from '../../resources/data/entity-manager-factory';
 
-export class ClienteService {
+export class ClienteRepositorio {
   getPage(pageIndex) {
     var query = new breeze.EntityQuery
       .from('Clientes')
